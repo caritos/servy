@@ -4,8 +4,7 @@ defmodule Servy.Handler do
 
   alias Servy.Conv
   alias Servy.BearController
-  alias Servy.VideoCam
-  
+    
   @pages_path Path.expand("../../pages", __DIR__)
 
   import Servy.Plugins, only: [rewrite_path: 1, log: 1, track: 1]

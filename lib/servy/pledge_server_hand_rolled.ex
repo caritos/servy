@@ -87,13 +87,6 @@ defmodule Servy.PledgeServerHandRolled do
     {:ok, "pledge-#{:rand.uniform(1000)}"}
   end
 
-  defp fetch_recent_pledges_from_service do
-    # CODE GOES HERE TO FETCH RECENT PLEDGES FROM EXTERNAL SERVICE
-
-    # Example return value:
-    [ {"wilma", 15}, {"fred", 25} ]
-  end
-
 end
 
 # alias Servy.PledgeServerHandRolled
