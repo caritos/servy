@@ -2,7 +2,7 @@ defmodule Servy.KickStarter do
   use GenServer
 
   def start_link(_arg) do
-    IO.puts "Starting the kickstarter..."
+    IO.puts 'Starting the kickstarter...'
     GenServer.start_link(__MODULE__, :ok, name: __MODULE__)
   end
 
@@ -20,7 +20,8 @@ defmodule Servy.KickStarter do
 
   defp start_server do
     IO.puts "Starting the HTTP server..."
-    server_pid = spawn_link(Servy.HttpServer, :start, [4000])
+    port = Application.get_env(:servy, :port)
+    server_pid = spawn_link(Servy.HttpServer, :start, [port])
     Process.register(server_pid, :http_server)
     server_pid
   end
